@@ -2,13 +2,26 @@
 <meta charset="utf-8">
 <style>
 
-.bar {
-  fill: steelblue;
-}
+  svg {
+    font: 10px sans-serif;
+    shape-rendering: crispEdges;
+  }
 
-.axis path {
-  display: none;
-}
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+  }
+ 
+  path.domain {
+    stroke: none;
+  }
+  
+  .y .tick line {
+    stroke: #ddd;
+  }
+  </style>
+
 
 </style>
 <svg width="960" height="500"></svg>
@@ -43,6 +56,10 @@ d3.csv("data.csv", type, function(error, data) {
   y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
   z.domain(data.columns.slice(1));
 
+//console.log(data.map(function(d) { return d.State; }));
+//console.log([0, d3.max(data, function(d) { return d.total; })])
+//console.log(data.columns.slice(1));
+console.log(data);
   g.selectAll(".serie")
     .data(stack.keys(data.columns.slice(1))(data))
     .enter().append("g")

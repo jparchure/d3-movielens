@@ -1,51 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Movie Lens Visualization</title>
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-  <style type="text/css">
-  h1{
-    font-family: sans-serif;
-  }
-  svg {
-    font: 10px sans-serif;
-    shape-rendering: crispEdges;
-  }
 
-  .axis path,
-  .x .axis line {
-    fill: none;
-    stroke: #000;
-  }
- 
-  path.domain {
-    stroke: none;
-  }
-  .y.axis line,
-  .y.axis path {
-  fill: none;
-  stroke: #ddd;
-  stroke-width:2px;
-}
-  .y .tick line {
-    stroke: #ddd;
-    stroke-width: 2px;
-  }
-  </style>
-<h1> Movie Lens data Visualization </h1>
+  <link rel="stylesheet" href="/css/skeleton.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/viz-style.css" type="text/css">
+  <div id="page-header">
+          <h1> Movie Lens Data Visualization </h1>
+  </div>
 </head>
+
 <body>
+<div class="content"></div>
 <script type="text/javascript">
 
 // Setup svg using Bostock's margin convention
 
 var margin = {top: 40, right: 260, bottom: 55, left: 60};
 
-var width = 1360 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
+var width = 1060 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
 
-var svg = d3.select("body")
+var svg = d3.select(".content")
   .append("svg")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)

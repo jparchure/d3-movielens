@@ -1,0 +1,27 @@
+h1{
+    font-family: sans-serif;
+  }
+  svg {
+    font: 10px sans-serif;
+    shape-rendering: crispEdges;
+  }
+
+  .axis path,
+  .x .axis line {
+    fill: none;
+    stroke: #000;
+  }
+ 
+  path.domain {
+    stroke: none;
+  }
+  .y.axis line,
+  .y.axis path {
+  fill: none;
+  stroke: #ddd;
+  stroke-width:2px;
+}
+  .y .tick line {
+    stroke: #ddd;
+    stroke-width: 2px;
+  }

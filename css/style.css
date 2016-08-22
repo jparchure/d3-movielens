@@ -1,0 +1,13 @@
+
+#page-header{
+	background-color: #FFF;
+	height:50px;
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+div.content{
+	width: 50%;
+	margin:0 auto;
+}
